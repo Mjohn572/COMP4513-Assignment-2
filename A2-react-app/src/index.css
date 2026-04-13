@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 .pageParent{
-  background-image: url('./public/lava lamp.jpeg');
+  background-image: url('/lava-lamp.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 :root {

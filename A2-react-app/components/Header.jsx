@@ -8,7 +8,7 @@ const Header = function (props) {
     return (
 
         <>
-            <header class="pageParent"
+            <header 
                 className="border-b border-gray-200 bg-white px-8 py-4"
             >
                 <div
@@ -18,17 +18,17 @@ const Header = function (props) {
                         className="flex flex-1 items-center gap-4"
                     >
                         <img
-                            src="/MruExchangeLogo.png"
-                            alt="MRU Exchange Logo"
-                            onClick={() => navigate('/home')}
+                            src="/.png"
+                            alt="Logo"
+                            onClick={() => navigate('/')}
                             className="h-auto w-[50px] cursor-pointer"
                         />
 
                         <h1
-                            onClick={() => navigate('/home')}
+                            onClick={() => navigate('/')}
                             className="cursor-pointer text-2xl font-bold text-gray-900"
                         >
-                        MRU Exchange
+                        
                         </h1>
                     </div>
 

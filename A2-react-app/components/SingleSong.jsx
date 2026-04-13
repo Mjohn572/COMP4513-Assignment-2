@@ -5,7 +5,7 @@ const SingleSong = function (props) {
     
     return (
         <>
-            <div> // for the whole thing (background)
+            <div className="pageParent"> // for the whole thing (background)
                 <div>  // For the title
                     {props.song.title}
                 </div> 
@@ -31,3 +31,5 @@ const SingleSong = function (props) {
         </>
     )
 }
+
+export default SingleSong;
