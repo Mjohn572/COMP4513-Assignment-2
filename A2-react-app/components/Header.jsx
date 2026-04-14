@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 const Header = function (props) {
@@ -9,62 +10,65 @@ const Header = function (props) {
 
         <>
             <header 
-                className="flex items-center justify-between"
+                className="w-full border-b border-gray-200 bg-white px-4 py-3"
             >
                 <div
-                    className="mx-auto flex max-w-[1200px] items-center justify-between gap-4"
+                    className="mx-auto flex items-center justify-between gap-4"
                 >
-                    <div 
-                        className="flex flex-1 items-center gap-4"
-                    >
-                        <img
-                            src="/lava-lamp-logo.jpg"
-                            alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
+                    <img
+                        src="/lava-lamp-logo.jpg"
+                        alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
+                        onClick={() => navigate('/')}
+                        className="h-auto w-[50px] cursor-pointer logoImage"
+                    />
+                    <nav>
+                        <button
                             onClick={() => navigate('/')}
-                            className="h-auto w-[50px] cursor-pointer"
-                        />
-
-                        <h1
-                            onClick={() => navigate('/')}
-                            className="cursor-pointer text-2xl font-bold text-gray-900"
+                            className=""
                         >
-                        
-                        </h1>
+                        Home
+                        </button>
+                        <button
+                            onClick={() => navigate('/artists')}
+                            className=""
+                        >
+                        | Artists
+                        </button>
+
+                        <button
+                            onClick={() => navigate('/genres')}
+                            className=""
+                        >
+                        | Genres
+                        </button>
+
+                        <button
+                            onClick={() => navigate('/songs')}
+                            className=""
+                        >
+                        | Songs 
+                        </button>
+
+                        <button // might need to be a dialog box on click
+                            onClick={() => navigate('/about')} 
+                            className=""
+                        >
+                        | About
+                        </button>
+
+                    </nav>
+
+                    <div className="flex items-center justify-between gap-1">
+                        <button
+                            onClick={() => navigate('/playlists')}
+                            className=""
+                        >
+                        Current Playlist
+                        </button> 
+                        <div>
+                            {props.currentPlaylist.songs.length}
+                        </div>
                     </div>
-
-                    <button
-                        onClick={() => navigate('artists')}
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
-                    Artists
-                    </button>
-
-                    <button
-                        onClick={() => navigate('genres')}
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-                    >
-                    Genres
-                    </button>
-
-                    <button
-                        onClick={() => navigate('songs')}
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-                    >
-                    Songs
-                    </button>
-
-                    <button // might need to be a dialog box on click
-                        onClick={() => navigate('about')} 
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-                    >
-                    About
-                    </button>
-
-                    <button
-                        onClick={() => navigate('/current-playlist')}
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-                    >
-                    Current Playlist
-                    </button>
 
                     <button
                         //onClick={handleSignOut}
