@@ -9,7 +9,7 @@ const Header = function (props) {
 
         <>
             <header 
-                className="border-b border-gray-200 bg-white px-8 py-4"
+                className="flex items-center justify-between"
             >
                 <div
                     className="mx-auto flex max-w-[1200px] items-center justify-between gap-4"
@@ -18,8 +18,8 @@ const Header = function (props) {
                         className="flex flex-1 items-center gap-4"
                     >
                         <img
-                            src="/.png"
-                            alt="Logo"
+                            src="/lava-lamp-logo.jpg"
+                            alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
                             onClick={() => navigate('/')}
                             className="h-auto w-[50px] cursor-pointer"
                         />

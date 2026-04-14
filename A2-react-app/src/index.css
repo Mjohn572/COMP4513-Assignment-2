@@ -8,6 +8,10 @@
   height: 100%;
 }
 
+.songListTable {
+  background-image: url('/');
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;

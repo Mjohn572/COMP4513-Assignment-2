@@ -3,7 +3,7 @@ const SongList = function (props) {
     return (
         <>
             <div>
-                <table>
+                <table className="table-auto">
                     <thead>
                         <tr key="headings">
                             <th>Title</th>
