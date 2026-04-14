@@ -28,7 +28,7 @@ const Playlists = function (props) {
                                     <button
                                         onClick={() => props.playlistFunctions.setCurrentPlaylist(playlist)}
                                     >
-                                        Make Current Playlist
+                                        Set as Current Playlist
                                     </button> 
                                     <button
                                         onClick={() => props.playlistFunctions.deletePlaylist(playlist.playlist_id)}
@@ -47,7 +47,8 @@ const Playlists = function (props) {
                         </tr>
                     </tbody>
                 </table>
-                <SongList songs={props.currentPlaylist.songs} isInPlaylist={props.playlistFunctions.isInPlaylist}/> // pass in songs in current playlist
+                <h1>Songs in Playlist</h1>
+                <SongList songs={props.currentPlaylist.songs} isInPlaylist={props.playlistFunctions.isInPlaylist}/> 
                 </div>
             </div>
         </>

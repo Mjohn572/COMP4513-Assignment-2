@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+import { Shake, ShakeLittle } from 'reshake'; // custom package https://elrumordelaluz.github.io/reshake/
 
 const Header = function (props) {
 
@@ -9,18 +10,27 @@ const Header = function (props) {
     return (
 
         <>
+        <div id="toasterbar" className="fixed middle text-white rounded">
+
+        </div>
             <header 
                 className="w-full border-b border-gray-200 bg-white px-4 py-3"
             >
                 <div
                     className="mx-auto flex items-center justify-between gap-4"
                 >
-                    <img
-                        src="/lava-lamp-logo.jpg"
-                        alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
-                        onClick={() => navigate('/')}
-                        className="h-auto w-[50px] cursor-pointer logoImage"
-                    />
+                    <Shake 
+                        h={5}
+                        v={5}
+                        r={3}
+                        dur={1000}  >
+                        <img
+                            src="/lava-lamp-logo.png"
+                            alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
+                            onClick={() => navigate('/')}
+                            className="h-auto w-[50px] cursor-pointer logoImage"
+                        />
+                    </Shake>
                     <nav>
                         <button
                             onClick={() => navigate('/')}
@@ -65,8 +75,19 @@ const Header = function (props) {
                         >
                         Current Playlist
                         </button> 
-                        <div>
-                            {props.currentPlaylist.songs.length}
+                        <div className="relative inline-block">
+                            <ShakeLittle> 
+                                <img
+                                    src="/lava-lamp-logo.png"
+                                    alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
+                                    onClick={() => navigate('/')}
+                                    className="h-auto w-[50px] cursor-pointer logoImage"
+                                /><span
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-md"
+                                >
+                                {props.currentPlaylist.songs.length}
+                                </span>
+                            </ShakeLittle>
                         </div>
                     </div>
 
