@@ -16,7 +16,7 @@ const SongList = function (props) {
                         {props.songs.map((song, index) => (
                             <tr key={index}>
                                 <td>{song.title}</td>
-                                <td>{song.artist.name}</td>
+                                <td>{song.artist.artist_name}</td>
                                 <td>{song.year}</td>
                                 <td>
                                     <button

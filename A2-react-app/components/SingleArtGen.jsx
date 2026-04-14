@@ -7,6 +7,7 @@ const SingleArtGen = function (props) {
         <>
             <div className="pageParent"> // Page
                 <div> // Title
+                    
                 </div>
                 <div> // Box for 2 Items
                     <div>
