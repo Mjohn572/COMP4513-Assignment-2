@@ -37,7 +37,7 @@ const Header = function (props) {
                         dur={1000} 
                     >
                         <img
-                            src={`${baseUrl}/lava-lamp-logo.png`}
+                            src="/lava-lamp-logo.png"
                             alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
                             onClick={() => navigate('/')}
                             className="h-auto w-[50px] cursor-pointer logoImage"
