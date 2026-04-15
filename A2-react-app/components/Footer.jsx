@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+const baseUrl = import.meta.env.BASE_URL;s
 
 const Footer = function (props) {
     const navigate = useNavigate();
@@ -8,7 +9,7 @@ const Footer = function (props) {
             <div>
                 <div>
                     <img
-                        src="/lava-lamp-logo.png"
+                        src={`${baseUrl}lava-lamp-logo.png`}
                         alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
                         onClick={() => navigate('/')}
                         className="h-auto w-[50px] cursor-pointer logoImage"
