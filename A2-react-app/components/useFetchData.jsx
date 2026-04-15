@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 function useFetchData() {
 
-    const dataURL = "https://corsproxy.io/?https://comp4513-assignment-1-jm8r.onrender.com";
+    const dataURL = "https://comp4513-assignment-1-jm8r.onrender.com";
   
     const [songs, setSongs] = useState([]);
 
