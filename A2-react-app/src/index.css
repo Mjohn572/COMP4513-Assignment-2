@@ -2,7 +2,7 @@
 
 .pageParent{
   background-image: url('/combined.jpg');
-  background-position: center;
+  background-position: top-center;
   background-repeat: repeat-y;
   width: 100%;
   height: 100%;
@@ -10,6 +10,7 @@
 
 .songListTable {
   background-image: url('/');
+  top: auto;
 }
 
 .logoImage {
@@ -125,7 +126,7 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 }
 
 h1 {

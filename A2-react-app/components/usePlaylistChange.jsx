@@ -68,7 +68,7 @@ const usePlaylistChange = function () {
         toasterBar._timer = setTimeout(() => {
             toasterBar.classList.remove("show");
             toasterBar._timer = null;
-        }, 1000);
+        }, 3000);
     }
 
     return {currentPlaylist, setCurrentPlaylist, deletePlaylist, makeNewPlaylist, editPlaylist, isInPlaylist, toasterBarHandler};

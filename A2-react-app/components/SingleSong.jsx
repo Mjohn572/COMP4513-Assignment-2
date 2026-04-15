@@ -11,22 +11,11 @@ const SingleSong = function (props) {
                 </div> 
                 <div> // Box for everything else
                     <div> // Box for Information
+                        <p>Artist: {props.song.artist.artist_name}</p>
+                        <p>Genre: {props.song.genre.genre_name}</p>
+                        <p>Year: {props.song.year}</p>
                     </div>
-                    <div> // Box for Image
-                    </div>
-                    <div> // Box for Genre, + song type info
-                    </div>
-                    <div> // Radar Chart 
-                    </div>
-                </div>
-                <div> // Related Songs title
-
-                </div>
-                <div> // For Related Songs
-                    {relatedSongs.map((song, index) => (
-                        <div></div>
-                    ))}
-                </div>
+                </div> 
             </div>
         </>
     )
