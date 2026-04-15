@@ -94,7 +94,7 @@ const Header = function (props) {
                                 dur={1250 - (props.currentPlaylist.songs.length * 50)} // The more songs in the playlist, the faster it shakes
                             >  
                                 <img
-                                    src={`${baseUrl}lava-lamp-logo.png`}
+                                    src="/lava-lamp-logo.png"
                                     alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
                                     onClick={() => navigate('/')}
                                     className="h-auto w-[50px] cursor-pointer logoImage"
