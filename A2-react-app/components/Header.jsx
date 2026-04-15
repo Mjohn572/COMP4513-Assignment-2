@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { Shake, ShakeLittle } from 'reshake'; // custom package https://elrumordelaluz.github.io/reshake/
-const baseUrl = import.meta.env.BASE_URL;
 
 const Header = function (props) {
 
@@ -38,7 +37,7 @@ const Header = function (props) {
                         dur={1000} 
                     >
                         <img
-                            src={`${baseUrl}lava-lamp-logo.png`}
+                            src={`${baseUrl}/lava-lamp-logo.png`}
                             alt="https://commons.wikimedia.org/wiki/File:Lavalampe.jpg"
                             onClick={() => navigate('/')}
                             className="h-auto w-[50px] cursor-pointer logoImage"
